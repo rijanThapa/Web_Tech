@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <form id="myform">
+      <input type="text" name="name" id="name" />
+      <input type="text" name="email" id="email" />
+    </form>
+    <div class="accordion">
+      <h1 class="header">Title</h1>
+      <div class="description">
+        <p>this is one</p>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".header").click(function() {
+            $(".desription").slideToggle()
+        })
+        $("#name").keyup(function () {
+          console.log("Key pressed in name field");
+        });
+      });
+    </script>
+  </body>
+</html>

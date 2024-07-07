@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./jquery-min-3.7.1.js"></script>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" />
+    <input type="email" name="email" id="email" />
+    <input type="password" name="password" id="password" />
+    <button id="btn">Submit</button>
+    <p id="result"></p>
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          var Name = $("#name").val();
+          var Email = $("#email").val();
+          var Password = $("#password").val();
+
+          if (Name === "" || Email === "" || Password === "") {
+            alert("Please fill in all fields");
+          } else {
+            $("#result").text(
+              `Name = ${Name}, Email = ${Email}, Password = ${Password}`
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

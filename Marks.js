@@ -1,17 +1,14 @@
 const marks = [80, 99, 95, 95, 96];
 
 function calculateSum(marks) {
-  if (marks.length === 0) {
-    console.log("No marks provided.");
-    return;
-  }
+ 
 
   let sum = 0;
   marks.forEach((mark) => {
     sum += mark;
   });
 
-  let maxMarks = marks.length * 100;
+  let maxMarks = 500;
   let percentage = (sum / maxMarks) * 100;
   if (percentage < 50) {
     console.log(" fail");
