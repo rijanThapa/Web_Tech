@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        box-sizing: border-box;
+      }
+      div {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .checkbox-group label {
+        margin-right: 10px;
+        margin-bottom: 5px;
+        font-weight: normal;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="form.php" method="post">
+      <div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter the name"
+          name="name"
+          required />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          name="email"
+          required />
+      </div>
+
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Colors</label>
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="colors[]" value="red" /> Red
+          </label>
+          <label>
+            <input type="checkbox" name="colors[]" value="blue" /> Blue
+          </label>
+          <label>
+            <input type="checkbox" name="colors[]" value="green" /> Green
+          </label>
+          <label>
+            <input type="checkbox" name="colors[]" value="yellow" /> Yellow
+          </label>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
